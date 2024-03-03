@@ -1,0 +1,32 @@
+body {
+    background-image: url(sun.png); /* Replace with your sunny image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+#temperature {
+    font-size: 3em;
+    color: #f00; /* Orange for sunny weather */
+    animation: temperature-blink 1s ease-in-out infinite;
+}
+
+@keyframes temperature-blink {
+    from { opacity: 1; }
+    to { opacity: 0.8; }
+}
+
+#weather-icon {
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
