@@ -1,5 +1,3 @@
-const latitude = `40.7128`;
-const longitude = `74.0060`;
 const apiKey = ""; // Open-Meteo doesn't require an API key
 
 const locationElement = document.getElementById("location");
@@ -8,7 +6,7 @@ const descriptionElement = document.getElementById("description");
 const weatherIconElement = document.getElementById("weather-icon");
 
 const fetchWeatherData = async () => {
-    const url = `https://api.open-meteo.com/v1/gfs?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,weathercode`;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=40.7143&longitude=-74.006&hourly=temperature_2m`;
 
     try {
         const response = await fetch(url);
